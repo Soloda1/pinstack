@@ -1,55 +1,56 @@
-# Pinstack — микросервисная социальная сеть 🖼️
+# Pinstack — Microservice Social Network 🖼️
 
-**Pinstack** — это pet-проект социальной сети, реализованной на **Go** с использованием **микросервисной архитектуры**. Основной упор — на чистую структуру, модульность, масштабируемость и практику продвинутых паттернов (gRPC, Kafka, Redis, Docker и др.).
-
----
-
-## 🧩 Архитектура микросервисов
-
-| Сервис                | Статус        | Описание |
-|------------------------|----------------|----------|
-| **User Service**       | ✅ Готов        | Управление пользователями: CRUD, взаимодействие через gRPC. |
-| **Auth Service**       | 🚧 В разработке | Авторизация и аутентификация, JWT, refresh-токены, работа через gRPC. |
-| **Post Service**       | 🚧 В разработке | Работа с постами, привязка к тегам и пользователям. |
-| **Tag Service**        | 🚧 В разработке | Автокомплит тегов, фильтрация, управление тегами. |
-| **Relation Service**   | 🚧 В разработке | Подписки и фолловеры между пользователями. |
-| **Notification Service** | 🚧 В разработке | Отправка событийных уведомлений через Kafka и Redis. |
-| **Feed Service**       | 🔜 Запланировано | Генерация ленты из постов подписок. |
-| **Search Service**     | 🔜 Запланировано | Полнотекстовый поиск по постам, тегам, юзерам. |
+**Pinstack** is a microservice-based social network built with **Go**, focusing on clean architecture, modularity, scalability, and production-level patterns like gRPC, Kafka, Redis, and Docker.
 
 ---
 
-## 🔌 Инфраструктура и интерфейсы
+## 🧩 Microservices Architecture
 
-| Компонент                | Статус        | Описание |
-|---------------------------|----------------|----------|
-| **API Gateway**           | ✅ Готов (базово) | Общая точка входа, валидация, маршрутизация HTTP → gRPC. Расширяется с появлением новых сервисов. |
-| **Proto Definitions**     | ✅ Готов (базово) | Общие `.proto` контракты, используется всеми сервисами. Расширяется при добавлении новых интерфейсов. |
-| **Infra Deployments**     | ✅ Готов (базово) | Docker Compose, PostgreSQL, Redis, Kafka и другие зависимости. Постепенно расширяется. |
-
----
-
-## 🗂 Репозитории проекта
-
-- [`pinstack-user-service`](https://github.com/Soloda1/pinstack-user-service) — сервис пользователей.
-- [`pinstack-auth-service`](https://github.com/Soloda1/pinstack-auth-service) — сервис авторизации и аутентификации.
-- [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions) — gRPC контракты.
-- [`pinstack-infra-deployments`](https://github.com/Soloda1/pinstack-infra-deployments) — инфраструктура.
-- [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway) — точка входа, проксирование запросов.
+| Service                 | Status         | Description |
+|-------------------------|----------------|-------------|
+| **User Service**        | ✅ Ready        | Manages users: CRUD, communicates via gRPC. |
+| **Auth Service**        | 🚧 In progress  | Authentication and authorization, JWT and refresh tokens. |
+| **Post Service**        | 🚧 In progress  | Post management, relation to tags and users. |
+| **Tag Service**         | 🚧 In progress  | Tag autocomplete, filtering, and management. |
+| **Relation Service**    | 🚧 In progress  | Following/follower relationships. |
+| **Notification Service**| 🚧 In progress  | Event notifications via Kafka + Redis. |
+| **Feed Service**        | 🔜 Planned      | Aggregates feed from followed users. |
+| **Search Service**      | 🔜 Planned      | Full-text search across users, tags, posts. |
 
 ---
 
-## ⚙️ Технологии
+## 🔌 Infrastructure & Interfaces
 
-- **Go** — язык разработки микросервисов
-- **gRPC / Protobuf** — коммуникация между сервисами
-- **PostgreSQL** — основная БД
-- **Redis** — кэш и сессии
-- **Kafka** — событийная архитектура
-- **Docker / Docker Compose** — контейнеризация
-- **Swagger / Protoc-gen-openapiv2** — документация
+| Component               | Status         | Description |
+|--------------------------|----------------|-------------|
+| **API Gateway**          | ✅ Ready (base) | Unified entry point: validation, routing HTTP → gRPC. Will evolve. |
+| **Proto Definitions**    | ✅ Ready (base) | Shared `.proto` contracts, used across services. |
+| **Infra Deployments**    | ✅ Ready (base) | Docker Compose: PostgreSQL, Redis, Kafka, etc. Extensible setup. |
 
 ---
 
-> ⚠️ Проект в активной разработке. Репозитории будут дополняться, архитектура — уточняться, а сервисы — расширяться.
+## 🗂 Project Repositories
 
+- [`pinstack-user-service`](https://github.com/Soloda1/pinstack-user-service)
+- [`pinstack-auth-service`](https://github.com/Soloda1/pinstack-auth-service)
+- [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions)
+- [`pinstack-infra-deployments`](https://github.com/Soloda1/pinstack-infra-deployments)
+- [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway)
+
+---
+
+## ⚙️ Technologies
+
+- **Go** — core language for services
+- **gRPC / Protobuf** — service-to-service communication
+- **PostgreSQL** — main database
+- **Redis** — caching & sessions
+- **Kafka** — event-driven architecture
+- **Docker / Compose** — containerized deployment
+- **Swagger / OpenAPIv2** — documentation
+
+---
+
+> 🇷🇺 [Читать на русском](README.ru.md)
+
+> 🚧 This project is in active development. Repositories, services, and structure are constantly evolving.
