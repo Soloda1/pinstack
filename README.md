@@ -9,7 +9,7 @@
 | Service                 | Status         | Description |
 |-------------------------|----------------|-------------|
 | **User Service**        | ✅ Ready        | Manages users: CRUD, communicates via gRPC. |
-| **Auth Service**        | 🚧 In progress  | Authentication and authorization, JWT and refresh tokens. |
+| **Auth Service**        | ✅ Ready  | Authentication and authorization, JWT and refresh tokens. |
 | **Post Service**        | 🚧 In progress  | Post management, relation to tags and users. |
 | **Tag Service**         | 🚧 In progress  | Tag autocomplete, filtering, and management. |
 | **Relation Service**    | 🚧 In progress  | Following/follower relationships. |
