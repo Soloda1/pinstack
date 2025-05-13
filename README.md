@@ -47,7 +47,7 @@
 - **Redis** — caching & sessions
 - **Kafka** — event-driven architecture
 - **Docker / Compose** — containerized deployment
-- **Swagger / OpenAPIv2** — documentation
+- **Swagger** — documentation
 
 ---
 
