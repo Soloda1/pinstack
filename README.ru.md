@@ -47,7 +47,7 @@
 - **Redis** — кэш и сессии
 - **Kafka** — событийная архитектура
 - **Docker / Docker Compose** — контейнеризация
-- **Swagger / Protoc-gen-openapiv2** — документация
+- **Swagger** — документация
 
 ---
 
