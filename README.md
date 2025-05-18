@@ -30,6 +30,7 @@
 
 ## 🗂 Project Repositories
 
+- [`pinstack-post-service`](https://github.com/Soloda1/pinstack-post-service)
 - [`pinstack-user-service`](https://github.com/Soloda1/pinstack-user-service)
 - [`pinstack-auth-service`](https://github.com/Soloda1/pinstack-auth-service)
 - [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions)
