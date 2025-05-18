@@ -30,6 +30,7 @@
 
 ## 🗂 Репозитории проекта
 
+- [`pinstack-post-service`](https://github.com/Soloda1/pinstack-post-service) — сервис постов.
 - [`pinstack-user-service`](https://github.com/Soloda1/pinstack-user-service) — сервис пользователей.
 - [`pinstack-auth-service`](https://github.com/Soloda1/pinstack-auth-service) — сервис авторизации и аутентификации.
 - [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions) — gRPC контракты.
