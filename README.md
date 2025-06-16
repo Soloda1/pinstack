@@ -36,6 +36,7 @@
 - [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions)
 - [`pinstack-infra-deployments`](https://github.com/Soloda1/pinstack-infra-deployments)
 - [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway)
+- [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service)
 
 ---
 
