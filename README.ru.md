@@ -36,6 +36,7 @@
 - [`pinstack-proto-definitions`](https://github.com/Soloda1/pinstack-proto-definitions) — gRPC контракты.
 - [`pinstack-infra-deployments`](https://github.com/Soloda1/pinstack-infra-deployments) — инфраструктура.
 - [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway) — точка входа, проксирование запросов.
+- [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service) - сервис подписок.
 
 ---
 
