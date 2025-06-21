@@ -6,25 +6,27 @@
 
 ## 🧩 Microservices Architecture
 
-| Service                 | Status         | Description |
-|-------------------------|----------------|-------------|
-| **User Service**        | ✅ Ready        | Manages users: CRUD, communicates via gRPC. |
-| **Auth Service**        | ✅ Ready        | Authentication and authorization, JWT and refresh tokens. |
-| **Post Service**        | ✅ Ready        | Post management, relation to tags and users. |
-| **Relation Service**    | ✅ Ready  | Following/follower relationships. |
-| **Notification Service**| ✅ Ready  | Event notifications via Kafka + Redis. |
-| **Feed Service**        | 🔜 Planned      | Aggregates feed from followed users. |
-| **Search Service**      | 🔜 Planned      | Full-text search across users, tags, posts. |
+| Service                                   | Status      | Description                                                                                       |
+|--------------------------------------------|-------------|---------------------------------------------------------------------------------------------------|
+| [**User Service**](https://github.com/Soloda1/pinstack-user-service)            | ✅ Ready    | Manages users: CRUD, communicates via gRPC.                                                       |
+| [**Auth Service**](https://github.com/Soloda1/pinstack-auth-service)            | ✅ Ready    | Authentication and authorization, JWT and refresh tokens.                                         |
+| [**Post Service**](https://github.com/Soloda1/pinstack-post-service)            | ✅ Ready    | Post management, relation to tags and users.                                                      |
+| [**Relation Service**](https://github.com/Soloda1/pinstack-relation-service)    | ✅ Ready    | Following/follower relationships.                                                                 |
+| [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka + Redis.                                                            |
+| [**Feed Service**](#)                      | 🔜 Planned  | Aggregates feed from followed users.                                                              |
+| [**Activity Service**](#)                  | 🔜 Planned  | Handles likes, reposts, comments, views — all types of user activity in one service.              |
+| [**e2e-tests Service**](#)                 | 🔜 Planned  | Automated end-to-end tests: runs requests against all public API endpoints defined in Swagger.     |
+| [**Logging/Monitoring Service**](#)        | 🔜 Planned  | Centralized logging and monitoring (Prometheus, Grafana, Kibana, etc.).                           |
 
 ---
 
 ## 🔌 Infrastructure & Interfaces
 
-| Component               | Status         | Description |
-|--------------------------|----------------|-------------|
-| **API Gateway**          | ✅ Ready (base) | Unified entry point: validation, routing HTTP → gRPC. Will evolve. |
-| **Proto Definitions**    | ✅ Ready (base) | Shared `.proto` contracts, used across services. |
-| **Infra Deployments**    | ✅ Ready (base) | Docker Compose: PostgreSQL, Redis, Kafka, etc. Extensible setup. |
+| Component                 | Status      | Description                                                                                       |
+|---------------------------|-------------|---------------------------------------------------------------------------------------------------|
+| [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)           | ✅ Ready (base) | Unified entry point: validation, routing HTTP → gRPC. Will evolve.                           |
+| [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)     | ✅ Ready (base) | Shared `.proto` contracts, used across services.                                               |
+| [**Infra Deployments**](https://github.com/Soloda1/pinstack-infra-deployments)     | ✅ Ready (base) | Docker Compose: PostgreSQL, Redis, Kafka, etc. Extensible setup.                               |
 
 ---
 
@@ -37,6 +39,7 @@
 - [`pinstack-infra-deployments`](https://github.com/Soloda1/pinstack-infra-deployments)
 - [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway)
 - [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service)
+- [`pinstack-notification-service`](https://github.com/Soloda1/pinstack-notification-service)
 
 ---
 
@@ -52,6 +55,6 @@
 
 ---
 
-> 🇷🇺 [Читать на русском](README.ru.md)
+> 🇷🇺 [читать на русском](README.ru.md)
 
 > 🚧 This project is in active development. Repositories, services, and structure are constantly evolving.
