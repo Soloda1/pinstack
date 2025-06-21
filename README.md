@@ -12,7 +12,7 @@
 | **Auth Service**        | ✅ Ready        | Authentication and authorization, JWT and refresh tokens. |
 | **Post Service**        | ✅ Ready        | Post management, relation to tags and users. |
 | **Relation Service**    | ✅ Ready  | Following/follower relationships. |
-| **Notification Service**| 🚧 In progress  | Event notifications via Kafka + Redis. |
+| **Notification Service**| ✅ Ready  | Event notifications via Kafka + Redis. |
 | **Feed Service**        | 🔜 Planned      | Aggregates feed from followed users. |
 | **Search Service**      | 🔜 Planned      | Full-text search across users, tags, posts. |
 
