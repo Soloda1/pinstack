@@ -12,7 +12,7 @@
 | [**Auth Service**](https://github.com/Soloda1/pinstack-auth-service)            | ✅ Ready    | Authentication and authorization, JWT and refresh tokens.                                         |
 | [**Post Service**](https://github.com/Soloda1/pinstack-post-service)            | ✅ Ready    | Post management, relation to tags and users.                                                      |
 | [**Relation Service**](https://github.com/Soloda1/pinstack-relation-service)    | ✅ Ready    | Following/follower relationships.                                                                 |
-| [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka + Redis.                                                            |
+| [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka.                                                            |
 | [**Feed Service**](#)                      | 🔜 Planned  | Aggregates feed from followed users.                                                              |
 | [**Activity Service**](#)                  | 🔜 Planned  | Handles likes, reposts, comments, views — all types of user activity in one service.              |
 | [**e2e-tests Service**](#)                 | 🔜 Planned  | Automated end-to-end tests: runs requests against all public API endpoints defined in Swagger.     |
