@@ -16,7 +16,7 @@
 | [**Feed Service**](#)                      | 🔜 Planned  | Aggregates feed from followed users.                                                              |
 | [**Activity Service**](#)                  | 🔜 Planned  | Handles likes, reposts, comments, views — all types of user activity in one service.              |
 | [**e2e-tests Service**](#)                 | 🔜 Planned  | Automated end-to-end tests: runs requests against all public API endpoints defined in Swagger.     |
-| [**Logging/Monitoring Service**](#)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
+| [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
 
 ---
 
@@ -40,6 +40,7 @@
 - [`pinstack-api-gateway`](https://github.com/Soloda1/pinstack-api-gateway)
 - [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service)
 - [`pinstack-notification-service`](https://github.com/Soloda1/pinstack-notification-service)
+- [`pinstack-monitoring-service`](https://github.com/Soloda1/pinstack-monitoring-service)
 
 ---
 
