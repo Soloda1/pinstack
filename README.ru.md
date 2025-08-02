@@ -15,8 +15,8 @@
 | [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Готов    | Уведомления о событиях через Kafka.                                                               |
 | [**Feed Service**](#)                         | 🔜 В планах | Агрегация ленты из подписок.                                                                              |
 | [**Activity Service**](#)                     | 🔜 В планах | Лайки, репосты, комментарии, просмотры — вся пользовательская активность в одном сервисе.                 |
-| [**system-tests Service**](#)                    | 🔜 В планах | Автоматизированные тесты: выполнение всех публичных API-запросов, определённых в Swagger.             |
-| [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)           | ✅ Готов | Централизованные логи и мониторинг (Prometheus, ELK и др.).                                   |
+| [**System-tests Service**](https://github.com/Soloda1/pinstack-system-tests)         | ✅ Готов | Автоматизированные тесты: выполнение всех публичных API-запросов, определённых в Swagger.             |
+| [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)          | ✅ Готов | Централизованные логи и мониторинг (Prometheus, ELK и др.).                                   |
 
 ---
 
@@ -25,7 +25,7 @@
 | Компонент                                     | Статус      | Описание                                                                                                  |
 |-----------------------------------------------|-------------|-----------------------------------------------------------------------------------------------------------|
 | [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)              | ✅ Готов (базовый) | Единая точка входа: валидация, роутинг HTTP → gRPC. Будет расширяться.                             |
-| [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)  | ✅ Готов (базовый) | Общие `.proto` контракты, используемые всеми сервисами.                                                 |
+| [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)  | ✅ Готов (базовый) | Общие `.proto` контракты, используемые всеми сервисами.                                               |
 | [**Infra Deployments**](https://github.com/Soloda1/pinstack-infra-deployments)  | ✅ Готов (базовый) | Docker Compose: PostgreSQL, Redis, Kafka и др. Гибкая инфраструктура.                                 |
 
 ---
@@ -41,6 +41,7 @@
 - [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service)
 - [`pinstack-notification-service`](https://github.com/Soloda1/pinstack-notification-service)
 - [`pinstack-monitoring-service`](https://github.com/Soloda1/pinstack-monitoring-service)
+- [`pinstack-system-tests`](https://github.com/Soloda1/pinstack-system-tests)
 
 ---
 
