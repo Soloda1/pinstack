@@ -15,7 +15,7 @@
 | [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka.                                                            |
 | [**Feed Service**](#)                      | 🔜 Planned  | Aggregates feed from followed users.                                                              |
 | [**Activity Service**](#)                  | 🔜 Planned  | Handles likes, reposts, comments, views — all types of user activity in one service.              |
-| [**system-tests Service**](#)                 | 🔜 Planned  | Automated tests: runs requests against all public API endpoints defined in Swagger.     |
+| [**System-tests Service**](https://github.com/Soloda1/pinstack-system-tests)                | ✅ Ready  | Automated tests: runs requests against all public API endpoints defined in Swagger.     |
 | [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
 
 ---
@@ -41,6 +41,7 @@
 - [`pinstack-relation-service`](https://github.com/Soloda1/pinstack-relation-service)
 - [`pinstack-notification-service`](https://github.com/Soloda1/pinstack-notification-service)
 - [`pinstack-monitoring-service`](https://github.com/Soloda1/pinstack-monitoring-service)
+- [`pinstack-system-tests`](https://github.com/Soloda1/pinstack-system-tests)
 
 ---
 
