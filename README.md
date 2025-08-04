@@ -57,6 +57,47 @@
 
 ---
 
+## 🚀 CI/CD Pipeline
+
+The entire **Pinstack** project uses a modern CI/CD approach with **GitHub Actions** for automated testing and **Makefile** for local development.
+
+### Test Automation 🔄
+
+**Each microservice** has its own CI pipeline that includes:
+
+- **Unit Tests** — unit tests with code coverage
+- **Integration Tests** — integration tests with necessary infrastructure
+- **Auto Cleanup** — automatic Docker resource cleanup
+- **Linting & Formatting** — code quality checks
+
+### Makefile Commands for Development 📋
+
+Each service includes convenient development commands:
+
+```bash
+# Code checks and tests
+make fmt                    # Code formatting
+make lint                   # Code linting
+make test-unit              # Unit tests
+make test-integration       # Integration tests
+make ci-local              # Full CI process locally
+
+# Infrastructure management
+make start-infrastructure   # Start necessary Docker containers
+make stop-infrastructure    # Stop containers
+make clean                  # Full cleanup
+```
+
+### CI/CD System Features 🔧
+
+- **Isolated infrastructure**: each service is tested only with necessary dependencies
+- **Full integration in Gateway**: API Gateway tests the entire system as a whole
+- **Automatic cleanup**: all Docker resources are cleaned up automatically
+- **Fast development**: local commands for rapid testing
+- **Code quality**: automatic formatting checks and linting
+
+---
+
 > 🇷🇺 [читать на русском](README.ru.md)
 
 > 🚧 This project is in active development. Repositories, services, and structure are constantly evolving.
