@@ -13,7 +13,7 @@
 | [**Post Service**](https://github.com/Soloda1/pinstack-post-service)            | ✅ Ready    | Post management, relation to tags and users.                                                      |
 | [**Relation Service**](https://github.com/Soloda1/pinstack-relation-service)    | ✅ Ready    | Following/follower relationships.                                                                 |
 | [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka.                                                            |
-| [**Feed Service**](#)                      | 🔜 Planned  | Aggregates feed from followed users.                                                              |
+| [**Chat Service**](#)                      | 🔜 Planned  | Implements real-time communication via WebSocket.                                                              |
 | [**Activity Service**](#)                  | 🔜 Planned  | Handles likes, reposts, comments, views — all types of user activity in one service.              |
 | [**System-tests Service**](https://github.com/Soloda1/pinstack-system-tests)                | ✅ Ready  | Automated tests: runs requests against all public API endpoints defined in Swagger.     |
 | [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
