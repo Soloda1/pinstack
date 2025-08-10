@@ -13,8 +13,6 @@
 | [**Post Service**](https://github.com/Soloda1/pinstack-post-service)            | ✅ Ready    | Post management, relation to tags and users.                                                      |
 | [**Relation Service**](https://github.com/Soloda1/pinstack-relation-service)    | ✅ Ready    | Following/follower relationships.                                                                 |
 | [**Notification Service**](https://github.com/Soloda1/pinstack-notification-service) | ✅ Ready    | Event notifications via Kafka.                                                            |
-| [**System-tests Service**](https://github.com/Soloda1/pinstack-system-tests)                | ✅ Ready  | Automated tests: runs requests against all public API endpoints defined in Swagger.     |
-| [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
 
 ---
 
@@ -25,6 +23,8 @@
 | [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)           | ✅ Ready (base) | Unified entry point: validation, routing HTTP → gRPC. Will evolve.                           |
 | [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)     | ✅ Ready (base) | Shared `.proto` contracts, used across services.                                               |
 | [**Infra Deployments**](https://github.com/Soloda1/pinstack-infra-deployments)     | ✅ Ready (base) | Docker Compose: PostgreSQL, Redis, Kafka, etc. Extensible setup.                               |
+| [**System-tests Service**](https://github.com/Soloda1/pinstack-system-tests)                | ✅ Ready  | Automated tests: runs requests against all public API endpoints defined in Swagger.     |
+| [**Logging/Monitoring Service**](https://github.com/Soloda1/pinstack-monitoring-service)        | ✅ Ready   | Centralized logging and monitoring (Prometheus, ELK, etc.).                           |
 
 ---
 
