@@ -292,6 +292,8 @@ make clean-dev-full
 
 ## 📈 Current Metrics & Monitoring
 
+<img width="1594" height="827" alt="Screenshot_20250818_184135" src="https://github.com/user-attachments/assets/e46c532b-bcb2-4b45-9236-2e9781da72a0" />
+
 All services collect comprehensive metrics:
 
 ### API Gateway Metrics
