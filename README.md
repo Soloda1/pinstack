@@ -313,7 +313,156 @@ All services collect comprehensive metrics:
 
 ---
 
-## 🔧 Architecture Decisions
+## � API Documentation
+
+The **Pinstack API Gateway** provides a comprehensive RESTful API with full Swagger/OpenAPI documentation available at:
+- **Swagger UI**: `http://localhost:8080/swagger/index.html` (when running locally)
+- **OpenAPI JSON**: `http://localhost:8080/swagger/doc.json`
+
+### 🔗 API Endpoints Overview
+
+#### Authentication (`/api/v1/auth`)
+| Method | Endpoint | Description | Authentication |
+|--------|----------|-------------|----------------|
+| `POST` | `/auth/register` | User registration | None |
+| `POST` | `/auth/login` | User authentication | None |
+| `POST` | `/auth/logout` | User logout | Refresh Token |
+| `POST` | `/auth/refresh` | Refresh access token | Refresh Token |
+| `PUT` | `/auth/update-password` | Update user password | JWT Required |
+
+#### User Management (`/api/v1/users`)
+| Method | Endpoint | Description | Authentication |
+|--------|----------|-------------|----------------|
+| `POST` | `/users` | Create new user | JWT Required |
+| `GET` | `/users/{id}` | Get user by ID | JWT Required |
+| `PUT` | `/users/{id}` | Update user profile | JWT Required |
+| `DELETE` | `/users/{id}` | Delete user account | JWT Required |
+| `PUT` | `/users/avatar` | Update user avatar | JWT Required |
+
+#### Posts (`/api/v1/posts`)
+| Method | Endpoint | Description | Authentication |
+|--------|----------|-------------|----------------|
+| `POST` | `/posts` | Create new post | JWT Required |
+| `GET` | `/posts/{id}` | Get post by ID | JWT Required |
+| `PUT` | `/posts/{id}` | Update post | JWT Required |
+| `DELETE` | `/posts/{id}` | Delete post | JWT Required |
+| `GET` | `/posts/list` | Get posts with pagination | JWT Required |
+
+#### Relationships (`/api/v1/relation`)
+| Method | Endpoint | Description | Authentication |
+|--------|----------|-------------|----------------|
+| `POST` | `/relation/follow` | Follow user | JWT Required |
+| `POST` | `/relation/unfollow` | Unfollow user | JWT Required |
+| `GET` | `/relation/{user_id}/followers` | Get user followers | JWT Required |
+| `GET` | `/relation/{user_id}/followees` | Get user followees | JWT Required |
+
+#### Notifications (`/api/v1/notification`)
+| Method | Endpoint | Description | Authentication |
+|--------|----------|-------------|----------------|
+| `GET` | `/notification/feed` | Get notification feed | JWT Required |
+| `GET` | `/notification/unread-count` | Get unread count | JWT Required |
+| `POST` | `/notification/send` | Send notification | JWT Required |
+| `PUT` | `/notification/{id}/read` | Mark as read | JWT Required |
+| `PUT` | `/notification/read-all` | Mark all as read | JWT Required |
+| `DELETE` | `/notification/{id}` | Delete notification | JWT Required |
+
+### 🔐 Authentication Flow
+
+1. **Registration**: `POST /auth/register`
+   ```json
+   {
+     "username": "john_doe",
+     "email": "john@example.com", 
+     "password": "secure123",
+     "full_name": "John Doe",
+     "bio": "Software Developer",
+     "avatar_url": "https://example.com/avatar.jpg"
+   }
+   ```
+
+2. **Login**: `POST /auth/login`
+   ```json
+   {
+     "login": "john_doe",  // username or email
+     "password": "secure123"
+   }
+   ```
+
+3. **Token Usage**: Include JWT in Authorization header
+   ```
+   Authorization: Bearer <access_token>
+   ```
+
+4. **Token Refresh**: `POST /auth/refresh`
+   ```json
+   {
+     "refresh_token": "<refresh_token>"
+   }
+   ```
+
+### 📊 Response Format
+
+All API responses follow consistent JSON structure:
+
+**Success Response**:
+```json
+{
+  "data": { ... },
+  "message": "Operation successful",
+  "timestamp": "2024-01-01T12:00:00Z"
+}
+```
+
+**Error Response**:
+```json
+{
+  "error": "Error description",
+  "code": "ERROR_CODE",
+  "timestamp": "2024-01-01T12:00:00Z"
+}
+```
+
+### 🏷️ Request/Response Examples
+
+#### Create Post
+```bash
+curl -X POST http://localhost:8080/api/v1/posts \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "My First Post",
+    "content": "This is my first post content",
+    "tags": ["programming", "go"],
+    "media_items": [
+      {
+        "type": "image",
+        "url": "https://example.com/image.jpg",
+        "description": "Sample image"
+      }
+    ]
+  }'
+```
+
+#### Get User Feed
+```bash
+curl -X GET "http://localhost:8080/api/v1/posts/list?page=1&limit=10" \
+  -H "Authorization: Bearer <token>"
+```
+
+### 📝 API Features
+
+- **OpenAPI 3.0 Specification**: Complete API documentation
+- **Request Validation**: Automatic input validation and error handling
+- **Rate Limiting**: Configurable request rate limits per endpoint
+- **Pagination**: Consistent pagination for list endpoints
+- **Media Support**: File upload and media handling
+- **Real-time Events**: WebSocket support for live notifications
+- **CORS Support**: Cross-origin request handling
+- **Health Checks**: Service health and readiness endpoints
+
+---
+
+## �🔧 Architecture Decisions
 
 ### Why Hexagonal Architecture?
 - **Testability**: Easy unit testing with mocked dependencies
