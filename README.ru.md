@@ -20,7 +20,7 @@
 
 | Компонент                                     | Статус      | Описание                                                                                                  |
 |-----------------------------------------------|-------------|-----------------------------------------------------------------------------------------------------------|
-| [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)              | ✅ Готов | HTTP→gRPC роутинг, JWT валидация, комплексные Prometheus метрики, поддержка rate limiting.                             |
+| [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)              | ✅ Готов | HTTP→gRPC роутинг, JWT валидация, комплексные Prometheus метрики.                             |
 | [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)  | ✅ Готов | Централизованные gRPC контракты с автоматической генерацией и управлением версиями.                                               |
 | [**Infra Deployments**](https://github.com/Soloda1/pinstack-infra-deployments)  | ✅ Готов | Docker Compose оркестрация для PostgreSQL, Redis, Kafka инфраструктуры.                                 |
 | [**System Tests**](https://github.com/Soloda1/pinstack-system-tests)         | ✅ Готов | End-to-end интеграционное тестирование с автоматической CI/CD интеграцией.             |
@@ -193,7 +193,6 @@ make redis-flush            # Очистка данных Redis (с подтве
 #### API Gateway
 - **Полное системное интеграционное тестирование**: End-to-end тесты покрывающие все взаимодействия сервисов
 - **Комплексные метрики**: HTTP запросы, gRPC вызовы, аутентификация, proxy метрики
-- **Rate Limiting и Circuit Breaker**: Production-ready паттерны устойчивости
 
 #### Отдельные сервисы
 - **Изолированное тестирование**: Каждый сервис тестирует только свои требуемые зависимости
@@ -362,7 +361,6 @@ curl -X GET "http://localhost:8080/api/v1/posts/list?page=1&limit=10" \
 
 - **OpenAPI 3.0 спецификация**: Полная документация API
 - **Валидация запросов**: Автоматическая валидация ввода и обработка ошибок
-- **Rate Limiting**: Настраиваемые лимиты запросов для каждого endpoint
 - **Пагинация**: Консистентная пагинация для списочных endpoints
 - **Поддержка медиа**: Загрузка файлов и обработка медиа
 - **Реальное время**: WebSocket поддержка для живых уведомлений
