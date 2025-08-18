@@ -98,7 +98,6 @@ All services follow **hexagonal architecture** patterns with clear separation of
 - **JWT Authentication** — stateless token-based authentication
 - **Refresh Token Rotation** — secure session management
 - **Input Validation** — comprehensive request validation
-- **Rate Limiting** — API protection and abuse prevention
 
 ### Performance
 - **Redis Caching** — intelligent caching strategies (cache-aside, write-through)
@@ -107,7 +106,6 @@ All services follow **hexagonal architecture** patterns with clear separation of
 - **Prometheus Metrics** — performance monitoring and alerting
 
 ### Reliability
-- **Circuit Breaker Pattern** — fault tolerance and resilience
 - **Health Checks** — service availability monitoring
 - **Graceful Shutdown** — proper resource cleanup
 - **Database Migrations** — versioned schema management
@@ -291,6 +289,8 @@ make clean-dev-full
 ---
 
 ## 📈 Current Metrics & Monitoring
+
+<img width="1594" height="827" alt="Screenshot_20250818_184135" src="https://github.com/user-attachments/assets/e46c532b-bcb2-4b45-9236-2e9781da72a0" />
 
 All services collect comprehensive metrics:
 
