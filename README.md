@@ -20,7 +20,7 @@
 
 | Component                 | Status      | Description                                                                                       |
 |---------------------------|-------------|---------------------------------------------------------------------------------------------------|
-| [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)           | ✅ Production Ready | HTTP→gRPC routing, JWT validation, comprehensive Prometheus metrics, rate limiting support.                           |
+| [**API Gateway**](https://github.com/Soloda1/pinstack-api-gateway)           | ✅ Production Ready | HTTP→gRPC routing, JWT validation, comprehensive Prometheus metrics.                           |
 | [**Proto Definitions**](https://github.com/Soloda1/pinstack-proto-definitions)     | ✅ Ready | Centralized gRPC contracts with automated generation and version management.                                               |
 | [**Infra Deployments**](https://github.com/Soloda1/pinstack-infra-deployments)     | ✅ Ready | Docker Compose orchestration for PostgreSQL, Redis, Kafka infrastructure.                               |
 | [**System Tests**](https://github.com/Soloda1/pinstack-system-tests)                | ✅ Production Ready  | End-to-end integration testing with automated CI/CD integration.     |
@@ -193,7 +193,6 @@ make redis-flush            # Clear Redis data (with confirmation)
 #### API Gateway
 - **Full System Integration Testing**: End-to-end tests covering all service interactions
 - **Comprehensive Metrics**: HTTP requests, gRPC calls, authentication, proxy metrics
-- **Rate Limiting & Circuit Breaker**: Production-ready resilience patterns
 
 #### Individual Services
 - **Isolated Testing**: Each service tests only its required dependencies
@@ -453,7 +452,6 @@ curl -X GET "http://localhost:8080/api/v1/posts/list?page=1&limit=10" \
 
 - **OpenAPI 3.0 Specification**: Complete API documentation
 - **Request Validation**: Automatic input validation and error handling
-- **Rate Limiting**: Configurable request rate limits per endpoint
 - **Pagination**: Consistent pagination for list endpoints
 - **Media Support**: File upload and media handling
 - **Real-time Events**: WebSocket support for live notifications
